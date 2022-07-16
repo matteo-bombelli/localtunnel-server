@@ -1,0 +1,15 @@
+version: '2.3'
+services:
+ cadvisor:
+  build: .
+  restart: always
+  privileged: true
+  ports:
+    - "3000:3000"
+  networks:
+    - "host"
+
+networks:
+  host:
+    external: true
+
